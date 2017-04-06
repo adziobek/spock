@@ -19,9 +19,12 @@ class SimpleTest extends Specification {
     def "should return size 3"() {
         given:
         List list = Stub()
+        List list1 = Stub()
         //Dla każdego wywołania list.size() zwraca 3
         list.size() >> 3
-        expectdfs:
+        //Dla kolejnych wywołań metody size() przypisz kolejno 1, 2, 3
+        list1.size() >>> [1, 2, 3]
+        expect:
         list.size() == 3
     }
 
