@@ -1,0 +1,2 @@
+Oparator >> przypisuje wartość, np.
+list.size() >> 3 - przypisuje wartość 3 jako wielkość listy
